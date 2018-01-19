@@ -2,10 +2,12 @@ package com.company.project.core;
 
 import com.alibaba.fastjson.JSON;
 
+import java.io.Serializable;
+
 /**
  * 统一API响应结果封装
  */
-public class Result {
+public class Result implements Serializable{
     private int code;
     private String message;
     private Object data;

@@ -1,8 +1,9 @@
 package com.company.project.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
-public class Userinfo {
+public class Userinfo{
     /**
      * 主键
      */

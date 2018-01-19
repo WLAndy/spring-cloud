@@ -41,7 +41,13 @@ public class UserinfoController {
     }
 
     @PostMapping("/detail")
-    public Result detail(@RequestParam Long id) {
+    public Result detail( Long id) {
+        Userinfo userinfo = userinfoService.findById(id);
+        return ResultGenerator.genSuccessResult(userinfo);
+    }
+
+    @RequestMapping("/detail1")
+    public Result detail1(@RequestParam Long id) {
         Userinfo userinfo = userinfoService.findById(id);
         return ResultGenerator.genSuccessResult(userinfo);
     }
